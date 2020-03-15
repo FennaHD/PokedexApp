@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Pokedex App</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.12.0/css/mdb.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/index.css">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <form class="form-inline">
+        <input id="form-input" class="form-control" type="search" placeholder="Name or Number">
+        <button id="form-button" class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </nav>
+
+    <div class="content-wrapper">
+      <div class="content-container">
+
+        <div id="error" class="row">
+          <p></p>
+        </div>
+
+        <div class="alert alert-danger center" role="alert">
+          <strong>Please enter a valid name or number of a Pokemon to continue</strong>.
+        </div>
+
+        <div id="intro" class="row">
+          <p>Welcome to my Pokedex. Enter a pokemon name or number above to see stats.</p>
+            <hr>
+          <p>
+            <strong>For graders:</strong> Even if you're familiar with Pokemon, you may find the following
+            rundown useful.
+            <ul>
+              <li>Invalid input will result in an alert asking to enter a valid name or number</li>
+              <li>Valid Pokemon numbers are between 1 and 807</li>
+              <li>Some common Pokemon names to test could be "Pikachu", "Lucario", "Absol" or any others you may know of</li>
+              <li>The list of Pokemon flows. If you enter Pokemon #001 or #807 then the "previous" and "next" Pokemon will the #807 and #001 respectively</li>
+              <li>The little image alternates between front and back if the API allows it. Otherwise the image will only be the front view. This can be tested with #1, which has front and back view, or #807, which only has front view</li>
+              <li>There'll be a loading image in place of the little Pokemon image while it loads</li>
+            </ul>
+          </p>
+
+        </div>
+
+        <div id="pokedex" class="row">
+          <div class="col">
+
+            <div class="row space-between">
+              <div id="previous" class="previous">
+                <div class="center">
+                  <i class="fa fa-arrow-left fa-2x"></i>
+                </div>
+                <span class="previous-span"><span id="previous-id">#001&nbsp</span><span id="previous-name">Previous</span></span>
+              </div>
+              <div id="next" class="next" href="#">
+                <span class="next-span"><span id="next-name">Next</span><span id="next-id">&nbsp#003</span></span>
+                <div class="center">
+                  <i class="fa fa-arrow-right fa-2x"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="row center main-name">
+              <h1><span id="pokemon-title-name">Pikachu </span><span id="pokemon-title-id">#025</span></h1>
+            </div>
+
+            <div class="row center">
+              <div class="pokemon-image-container">
+                <img id="pokemon-image" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png">
+              </div>
+
+              <div class="stats-container">
+                <div class="row">
+                  <img id="sprites" src="images/loading.png" class="loading">
+                </div>
+                <div class="row">
+                  <div class="stat-box">
+                    <span class="stat-name">Height: </span><span id="height">50</span>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="stat-box">
+                    <span class="stat-name">Weight: </span><span id="weight">40 lbs</span>
+                  </div>
+                </div>
+                <div class="row type">
+                  <div class="stat-box">
+                    <span class="stat-name">Type: </span><span id="types">Bug</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Footer -->
+      <footer class="page-footer font-small white darken-3">
+        <!-- Footer Elements -->
+        <div class="footer-container">
+          <!-- Grid row-->
+          <div class="row">
+            <!-- Grid column -->
+            <div class="col-md-12 py-5">
+              <div class="flex-center">
+                <!-- Facebook -->
+                <a class="fb-ic" href="https://www.facebook.com/fernando.maluenda" target="_blank">
+                  <i class="fab fa-facebook-f fa-lg black-text mr-md-5 mr-sm-5 mr-4 fa-2x"> </i>
+                </a>
+                <!-- Twitter -->
+                <a class="tw-ic" href="https://twitter.com/Pokemon?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank">
+                  <i class="fab fa-twitter fa-lg black-text mr-md-5 mr-sm-5 mr-4 fa-2x"> </i>
+                </a>
+                <!--Linkedin -->
+                <a class="li-ic" href="https://www.linkedin.com/in/fernando-maluenda-7a4a46158/" target="_blank">
+                  <i class="fab fa-linkedin-in fa-lg black-text mr-md-5 mr-sm-5 mr-4 fa-2x"> </i>
+                </a>
+                <!--Instagram-->
+                <a class="ins-ic" href="https://www.instagram.com/pokemon/?hl=en" target="_blank">
+                  <i class="fab fa-instagram fa-lg black-text mr-md-5 mr-sm-5 mr-4 fa-2x"> </i>
+                </a>
+                <!-- Github -->
+                <a class="gb-ic" href="https://github.com/FennaHD/PokedexApp" target="_blank">
+                  <i class="fab fa-github fa-lg black-text mr-md-5 mr-sm-5 mr-4 fa-2x"></i>
+                </a>
+              </div>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row-->
+        </div>
+        <!-- Footer Elements -->
+      </footer>
+    <!-- Footer -->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <script src=js/functions.js></script>
+    <script src="js/search.js"></script>
+  </body>
+</html>
