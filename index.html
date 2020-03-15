@@ -31,27 +31,27 @@
     <div class="content-wrapper">
       <div class="content-container">
 
-        <div id="error" class="row">
-          <p></p>
-        </div>
-
         <div class="alert alert-danger center" role="alert">
-          <strong>Please enter a valid name or number of a Pokemon to continue</strong>.
+          <strong>Please enter a valid name or number of a Pokemon to continue.</strong>
+          Valid numbers range from 1 to 807. Examples of names include "Pikachu" and "Entei".
         </div>
 
         <div id="intro" class="row">
-          <p>Welcome to my Pokedex. Enter a pokemon name or number above to see stats.</p>
-            <hr>
+          <p class="welcome mt-4 ml-5 mr-5">
+            Welcome to my Pokedex! Enter a pokemon name or number above to see stats.
+          </p>
+          <br>
           <p>
-            <strong>For graders:</strong> Even if you're familiar with Pokemon, you may find the following
-            rundown useful.
+            <strong><u>For graders:</u></strong> Even if you're familiar with Pokemon, you may find it useful to read the following
+            rundown listing functionality you may otherwise miss.
             <ul>
               <li>Invalid input will result in an alert asking to enter a valid name or number</li>
               <li>Valid Pokemon numbers are between 1 and 807</li>
               <li>Some common Pokemon names to test could be "Pikachu", "Lucario", "Absol" or any others you may know of</li>
               <li>The list of Pokemon flows. If you enter Pokemon #001 or #807 then the "previous" and "next" Pokemon will the #807 and #001 respectively</li>
-              <li>The little image alternates between front and back if the API allows it. Otherwise the image will only be the front view. This can be tested with #1, which has front and back view, or #807, which only has front view</li>
+              <li>The little image in the box alternates between front and back if the API allows it. Otherwise the image will only be the front view. This can be tested with #1, which has front and back view, or #807, which only has front view</li>
               <li>There'll be a loading image in place of the little Pokemon image while it loads</li>
+              <li>There'll be a button to take you back to this instruction menu</li>
             </ul>
           </p>
 
@@ -59,7 +59,11 @@
 
         <div id="pokedex" class="row">
           <div class="col">
-
+            <div class="row center mb-4">
+              <button id="back-home" type="button" class="btn btn-default btn-sm instructions">
+                Confused? Go back to the instruction page!
+              </button>
+            </div>
             <div class="row space-between">
               <div id="previous" class="previous">
                 <div class="center">

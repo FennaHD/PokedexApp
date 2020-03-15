@@ -20,7 +20,7 @@ hr {
 }
 
 .content-wrapper {
-  margin-top: 40px;
+  margin-top: 15px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -171,7 +171,7 @@ hr {
   }
 
   #previous-id {
-    margin-top: 5px;
+    margin-top: 0px;
   }
 
   .next-span {
@@ -259,4 +259,13 @@ strong {
 
 .alert {
   display: none;
+}
+
+.instructions {
+  font-size: 15px !important;
+}
+
+.welcome {
+  font-size: 20px;
+  text-align: center;
 }

@@ -1,3 +1,10 @@
+$("#back-home").on("click", function() {
+  $('.alert').hide();
+  clearInputField();
+  $("#intro").css("display", "flex");
+  $("#pokedex").css("display", "none");
+});
+
 $("#previous").on("click", function() {
   event.preventDefault();
   fetch(getPreviousUrl())
